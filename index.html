@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Zone</title>
+</head>
+<style>
+
+    @font-face {
+        font-family: 'hacker';
+        src: url('fonts/Hacked-KerX.ttf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+        }
+
+    body {
+            background-color: rgb(0, 0, 0);
+            color: #FFFF;
+            margin: 0;
+            padding: 0;
+            color: #38FF42;
+            font-family: 'hacker', sans-serif;   
+    }
+
+    .main-title
+    {
+       text-align: center;
+       color: #38FF42;
+       font-family: 'hacker', sans-serif;   
+    }
+
+    .sub-title
+    {
+       text-align: center;
+       color: #38FF42;
+       font-family: 'hacker', sans-serif;
+       margin-top: 80px;   
+    }
+
+    .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+    .sht-container
+    {
+       cursor: pointer;
+    }
+
+    .prod-subtitle
+    {
+        margin-left: 50px;
+    }
+
+    .disclaimer
+    {
+       text-align: center;
+       margin-top: 35px;
+       margin-bottom: 50px;
+    }
+</style>
+
+<body>
+    <h1 class="main-title">Hacking Zone</h1>
+    <p class="disclaimer">These tools are provided for educational purposes only. <br> I am not responsible for how others use it. Please use it responsibly.</p>
+    <h1 class="sub-title">Our majestic products</h1>
+    <div class="products-container">
+        <div>
+    <img src="locator.png" onclick="location.href='locator.html'" class="sht-container" width="200" height="200">
+    <h1 class="prod-subtitle">locator</h1>
+    </div>
+    <div>
+    <img src="webhook.png" onclick="location.href='webhook.html'" class="sht-container" width="200" height="200"> 
+    <h1 class="prod-subtitle">webhook</h1>
+    </div>
+    
+
+</div>
+</body>
+</html>
