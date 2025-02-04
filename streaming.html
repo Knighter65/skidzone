@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clappr-pip@latest/dist/clappr-pip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.min.js"></script>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        var player = new Clappr.Player({
+            source: 'https://linear301-it-dash1-prd-akg0.cdn13.skycdp.com/016a/31023/FHD/skysportuno/master_stereo.mpd',
+            parentId: "#player",
+            plugins: [LevelSelector, ClapprPip.PipButton, ClapprPip.PipPlugin, DashShakaPlayback],
+            events: {
+                onReady: function() {
+                    var plugin = this.getPlugin("click_to_pause");
+                    plugin && plugin.disable();
+                },
+            },
+            height: "100%",
+            width: "100%",
+            shakaConfiguration: {
+                drm: {
+                    clearKeys: {
+                        '0036aaa1d68c6b487e29a5cb080a8a28':'a3e8db3ff3c876f7b43a961b64a63474'
+                    }
+                },
+            },
+        });
+    </script>
+</body>
+</html>
